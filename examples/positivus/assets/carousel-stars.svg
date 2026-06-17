@@ -1,0 +1,9 @@
+<svg width="146" height="14" overflow="visible" style="display: block;" viewBox="0 0 146 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Stars">
+<path id="Star" d="M7.0099 2.05941L14 0L11.9604 7.0099L14 14L7.0099 11.9604L0 14L2.05941 7.0099L0 0L7.0099 2.05941Z" fill="var(--fill-0, #B9FF66)"/>
+<path id="Star_2" d="M40.0099 2.05941L47 0L44.9604 7.0099L47 14L40.0099 11.9604L33 14L35.0594 7.0099L33 0L40.0099 2.05941Z" fill="var(--fill-0, white)"/>
+<path id="Star_3" d="M73.0099 2.05941L80 0L77.9604 7.0099L80 14L73.0099 11.9604L66 14L68.0594 7.0099L66 0L73.0099 2.05941Z" fill="var(--fill-0, white)"/>
+<path id="Star_4" d="M106.01 2.05941L113 0L110.96 7.0099L113 14L106.01 11.9604L99 14L101.059 7.0099L99 0L106.01 2.05941Z" fill="var(--fill-0, white)"/>
+<path id="Star_5" d="M139.01 2.05941L146 0L143.96 7.0099L146 14L139.01 11.9604L132 14L134.059 7.0099L132 0L139.01 2.05941Z" fill="var(--fill-0, white)"/>
+</g>
+</svg>
