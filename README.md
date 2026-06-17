@@ -52,9 +52,10 @@ Take either away and you're back to "looks about right." Together you get a feed
 
 ## Getting started
 
-1. Open the [worked example](examples/positivus/README.md) to see what a finished pass looks like
-2. Read [`HANDOFF_TEMPLATE.md`](HANDOFF_TEMPLATE.md) — the designer-facing spec. A clean Figma file is the single biggest factor in first-pass accuracy
-3. Read [`docs/VERIFY.md`](docs/VERIFY.md) — the verification loop with copy-pasteable commands
+1. **Start from the Figma file** — duplicate the [Figma MCP Loop](https://www.figma.com/community/file/1649213954960222549/figma-mcp-loop) Community template. Page structure, naming conventions, and example components are already wired up
+2. Open the [worked example](examples/positivus/README.md) to see what a finished pass looks like
+3. Read [`HANDOFF_TEMPLATE.md`](HANDOFF_TEMPLATE.md) — the designer-facing spec. A clean Figma file is the single biggest factor in first-pass accuracy
+4. Read [`docs/VERIFY.md`](docs/VERIFY.md) — the verification loop with copy-pasteable commands
 
 ## Requirements for the loop itself
 

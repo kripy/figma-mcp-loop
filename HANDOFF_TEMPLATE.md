@@ -2,6 +2,8 @@
 
 A checklist and naming spec for designers before handing a Figma file to a developer using Claude Code + Figma MCP.
 
+> **Prefer to start from a Figma file?** Duplicate the [Figma MCP Loop](https://www.figma.com/community/file/1649213954960222549/figma-mcp-loop) Community template — page structure, naming conventions, and example components already wired up.
+
 ---
 
 ## 1. Page Structure
