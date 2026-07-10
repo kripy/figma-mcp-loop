@@ -15,6 +15,7 @@ infrastructure to boot.
 - **`/blog`** — the Journal listing. Tiles from the `posts` collection, newest first.
 - **`/posts/[slug]`** — article page. Header, featured image, Lexical rich-text body, and a
   "More from the journal" strip of the 3 next-newest posts.
+- **`/work`** — a listing of all case studies (grid of tiles), reachable from the "Work" nav link.
 - **`/work/[slug]`** — case-study pages built from a `case-studies` collection with a flexible
   **blocks** layout. The Home "latest work" cards link straight to them. Seeded with six fictional
   projects (named to match the cards, e.g. `/work/free-bird`); the template is pixel-matched to the

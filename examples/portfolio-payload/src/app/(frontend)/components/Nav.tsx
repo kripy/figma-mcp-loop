@@ -9,6 +9,7 @@ export function Nav() {
       <nav className="nav__links" aria-label="Main navigation">
         <Link href="/about">About</Link>
         <Link href="/blog">Blog</Link>
+        <Link href="/work">Work</Link>
         <Link href="/#contact">Contact</Link>
       </nav>
     </header>

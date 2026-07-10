@@ -576,3 +576,41 @@ a { color: inherit; text-decoration: none; }
   .case-cta { padding: 80px 20px; }
   .case-cta h2 { font-size: 32px; line-height: 40px; }
 }
+
+/* ==========================================================================
+   Work index (/work) — case-study listing (Payload only)
+   ========================================================================== */
+.work-index { padding: 100px 100px 150px; gap: 60px; }
+.work-index__heading { font-weight: 600; font-size: var(--text-h2); line-height: var(--lh-h2); }
+.work-grid {
+  width: var(--content);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px 30px;
+}
+.work-tile { display: flex; flex-direction: column; gap: 25px; color: inherit; text-decoration: none; }
+.work-tile__thumb {
+  aspect-ratio: 1 / 1;
+  background: var(--color-grey);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #c2c2c2;
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.work-tile__head { display: flex; flex-direction: column; gap: 10px; }
+.work-tile__title { font-weight: 600; font-size: var(--text-subtitle); line-height: var(--lh-subtitle); }
+.work-tile__sub { color: #898989; }
+
+@media (max-width: 1024px) {
+  .work-index { padding: 80px 40px 120px; }
+  .work-grid { width: 100%; max-width: 1080px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 640px) {
+  .work-index { padding: 60px 20px 80px; }
+  .work-grid { grid-template-columns: minmax(0, 360px); }
+}
