@@ -1,6 +1,9 @@
 .DS_Store
 .idea/
 .vscode/
+
+# local dev notes (internal; not for the public repo)
+CLAUDE.md
 node_modules/
 __pycache__/
 *.pyc

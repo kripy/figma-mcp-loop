@@ -1,0 +1,28 @@
+{
+  "name": "positivus-sanity",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "seed": "sanity exec scripts/seed.ts --with-user-token"
+  },
+  "dependencies": {
+    "@sanity/image-url": "^1.1.0",
+    "@sanity/vision": "^3.68.3",
+    "next": "^15.5.19",
+    "next-sanity": "^9.8.44",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "sanity": "^3.68.3",
+    "styled-components": "^6.1.14"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "typescript": "^5"
+  }
+}
