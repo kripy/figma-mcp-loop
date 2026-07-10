@@ -214,6 +214,10 @@ export interface CaseStudy {
    * e.g. the founder / client name.
    */
   subtitle?: string | null;
+  /**
+   * Square thumbnail shown on the /work index and Home cards.
+   */
+  cardImage?: (number | null) | Media;
   intro: string;
   services?:
     | {
@@ -402,6 +406,7 @@ export interface CaseStudiesSelect<T extends boolean = true> {
   title?: T;
   slug?: T;
   subtitle?: T;
+  cardImage?: T;
   intro?: T;
   services?:
     | T

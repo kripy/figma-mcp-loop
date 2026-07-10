@@ -85,6 +85,12 @@ export const CaseStudies: CollectionConfig = {
       },
     },
     { name: 'subtitle', type: 'text', admin: { description: 'e.g. the founder / client name.' } },
+    {
+      name: 'cardImage',
+      type: 'upload',
+      relationTo: 'media',
+      admin: { description: 'Square thumbnail shown on the /work index and Home cards.' },
+    },
     { name: 'intro', type: 'textarea', required: true },
     {
       name: 'services',

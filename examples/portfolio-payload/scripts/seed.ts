@@ -284,12 +284,13 @@ async function run() {
   // --- case studies (fictional — named to match the Home "latest work" cards) ---
   const paras = (...t: string[]) => t.map((text) => ({ text }))
   const caseStudy = (o: {
-    title: string; subtitle: string; intro: string; services: string[];
+    title: string; subtitle: string; card: number; intro: string; services: string[];
     problem: string; idea: string; quote: string;
     chapters: { title: string; paras: string[] }[];
   }) => ({
     title: o.title,
     subtitle: o.subtitle,
+    cardImage: o.card,
     intro: o.intro,
     services: o.services.map((label) => ({ label })),
     ctaHeading: 'Have an uncommon problem or promising pitch? Let’s partner up.',
@@ -308,7 +309,7 @@ async function run() {
 
   const CASES = [
     caseStudy({
-      title: 'Free Bird', subtitle: 'Lynyrd Skynyrd',
+      title: 'Free Bird', subtitle: 'Lynyrd Skynyrd', card: media['work-1.jpg'],
       intro: 'Free Bird is a spontaneous-travel app for people who decide where to go on the morning they leave. It turns a vague itch to get away into a bookable day-trip in three taps — routes, stops, and a soundtrack included.',
       services: ['Product Strategy', 'UI/UX Design', 'Brand Identity', 'Prototyping', 'Growth Strategy'],
       problem: 'Travel apps are built for planners — endless filters, weeks of research, and rigid itineraries. There was nothing for the person who wants to leave in an hour and figure it out on the way.',
@@ -323,7 +324,7 @@ async function run() {
       ],
     }),
     caseStudy({
-      title: 'Purple Haze', subtitle: 'Jimi Hendrix',
+      title: 'Purple Haze', subtitle: 'Jimi Hendrix', card: media['work-2.jpg'],
       intro: 'Purple Haze is a generative-art studio in your pocket. Describe a feeling, and it paints — turning a sentence into a poster, a pattern, or a moving gradient you can export anywhere.',
       services: ['Product Strategy', 'AI Design', 'UI/UX Design', 'Creative Direction', 'Prototyping'],
       problem: 'Generative tools overwhelmed newcomers with knobs and jargon. Making something beautiful took a tutorial, not a moment of play.',
@@ -337,7 +338,7 @@ async function run() {
       ],
     }),
     caseStudy({
-      title: 'You Really Got Me', subtitle: 'The Kinks',
+      title: 'You Really Got Me', subtitle: 'The Kinks', card: media['work-3.jpg'],
       intro: 'You Really Got Me is a local-events app that learns what actually gets you out of the house — then fills your week with exactly enough of it.',
       services: ['Product Strategy', 'UI/UX Design', 'Data & Personalisation', 'Prototyping', 'Growth Strategy'],
       problem: 'Event apps drown you in listings and reward the loudest promoters. Finding one thing you’d truly enjoy took more effort than just staying in.',
@@ -351,7 +352,7 @@ async function run() {
       ],
     }),
     caseStudy({
-      title: 'American Girl', subtitle: 'Tom Petty',
+      title: 'American Girl', subtitle: 'Tom Petty', card: media['work-4.jpg'],
       intro: 'American Girl is a sustainable-fashion marketplace where every piece carries its story — who made it, from what, and how far it travelled — without turning a purchase into homework.',
       services: ['Brand Identity', 'UI/UX Design', 'Product Strategy', 'Commercial Modelling', 'Growth Strategy'],
       problem: 'Ethical fashion asked shoppers to become researchers. Provenance data existed, but it was buried, inconsistent, and joyless.',
@@ -365,7 +366,7 @@ async function run() {
       ],
     }),
     caseStudy({
-      title: 'Whole Lotta Love', subtitle: 'Led Zeppelin',
+      title: 'Whole Lotta Love', subtitle: 'Led Zeppelin', card: media['work-5.jpg'],
       intro: 'Whole Lotta Love is a community fundraising platform for the causes closest to home — the local team, the neighbour in trouble, the street party that needs a stage.',
       services: ['Product Strategy', 'UI/UX Design', 'Brand Identity', 'Prototyping', 'Commercial Advice'],
       problem: 'Big fundraising platforms felt corporate and took a heavy cut. Small, local drives got lost and organisers burned out on admin.',
@@ -379,7 +380,7 @@ async function run() {
       ],
     }),
     caseStudy({
-      title: 'Under Pressure', subtitle: 'Queen',
+      title: 'Under Pressure', subtitle: 'Queen', card: media['work-6.jpg'],
       intro: 'Under Pressure is a stress companion that notices before you do — a calm, private check-in that turns a rough day into a plan you can actually follow.',
       services: ['Product Strategy', 'UI/UX Design', 'AI Design', 'Testing & Validation', 'Growth Strategy'],
       problem: 'Wellness apps piled on streaks and guilt, adding pressure to the very people trying to relieve it. Engagement metrics fought the mission.',

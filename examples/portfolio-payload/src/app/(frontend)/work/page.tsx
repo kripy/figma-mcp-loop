@@ -4,6 +4,7 @@ import { getPayload } from 'payload'
 import config from '@/payload.config'
 import { Nav } from '../components/Nav'
 import { Footer } from '../components/Footer'
+import { mediaAlt, mediaUrl } from '../lib'
 
 export const dynamic = 'force-dynamic'
 
@@ -15,6 +16,7 @@ export default async function WorkIndexPage() {
     collection: 'case-studies',
     sort: 'title',
     limit: 100,
+    depth: 1,
   })
 
   return (
@@ -26,7 +28,12 @@ export default async function WorkIndexPage() {
         <div className="work-grid">
           {cases.map((cs) => (
             <Link className="work-tile" href={`/work/${cs.slug}`} key={cs.id}>
-              <div className="work-tile__thumb">{cs.title}</div>
+              {mediaUrl(cs.cardImage) ? (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img className="work-tile__thumb" src={mediaUrl(cs.cardImage)} alt={mediaAlt(cs.cardImage) || cs.title} />
+              ) : (
+                <div className="work-tile__thumb">{cs.title}</div>
+              )}
               <div className="work-tile__head">
                 <span className="work-tile__title">{cs.title}</span>
                 {cs.subtitle ? <span className="work-tile__sub">{cs.subtitle}</span> : null}

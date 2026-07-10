@@ -31,7 +31,8 @@ static `examples/portfolio/index.html`.
 **Collections** (`src/collections/`):
 - `posts` — `title`, `slug` (auto from title), `tag`, `excerpt`, `thumbnail` (upload → `media`,
   340×220), `featuredImage` (1080×480), `author`, `publishedDate`, `readingTime`, `body` (Lexical).
-- `case-studies` — `title`, `slug`, `subtitle`, `intro`, `services[]`, `ctaHeading`/`ctaAccent`, and a
+- `case-studies` — `title`, `slug`, `subtitle`, `cardImage` (upload → `media`, shown on the `/work`
+  tiles), `intro`, `services[]`, `ctaHeading`/`ctaAccent`, and a
   `layout` **blocks** field with four block types: `media` (variant phones/wide/tall × white/cream),
   `split` (two labelled columns), `quote`, and `chapter` (title + paragraphs). Reorder/add sections
   in `/admin`.
