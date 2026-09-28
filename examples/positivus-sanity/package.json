@@ -12,10 +12,10 @@
   "dependencies": {
     "@sanity/image-url": "^1.1.0",
     "@sanity/vision": "^3.68.3",
-    "next": "^15.5.19",
+    "next": "^15.5.26",
     "next-sanity": "^9.8.44",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
+    "react": "^19.0.8",
+    "react-dom": "^19.0.8",
     "sanity": "^3.68.3",
     "styled-components": "^6.1.14"
   },
