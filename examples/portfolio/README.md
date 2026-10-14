@@ -1,22 +1,23 @@
 # Portfolio — Figma → static build (loop-verified)
 
 Two things live here:
-1. A **static HTML/CSS build** of the portfolio (`index.html` + `about.html`), generated from the
-   Figma design and **pixel-diff verified** against the Figma frames (zero-dependency, like
+1. A **static HTML/CSS build** of the portfolio (Home, About, Blog, Article + a `free-bird.html`
+   case study), generated from the Figma design and **pixel-diff verified** against the Figma frames (zero-dependency, like
    [`../positivus/`](../positivus/)).
 2. The record of the **Figma reformat** that made the file loop-ready (below).
 
-Next pass: `portfolio-sanity` — wire the sections into Sanity + Next.js, like
-[`../positivus-sanity/`](../positivus-sanity/).
+The CMS pass is done: [`../portfolio-payload/`](../portfolio-payload/) renders this whole site from
+Payload CMS, pixel-verified against these static pages.
 
 ## Static build
 
 ```
 portfolio/
-├── index.html      # Home (nav, hero, logos, skills, latest work, clients, footer/contact)
+├── index.html      # Home (nav, hero, skills, latest work, clients, footer/contact)
 ├── about.html      # About (nav, pink header/bio, body w/ teal highlights, footer/contact)
 ├── blog.html       # The Journal (nav, photo hero banner, 2×3 post-tile grid, footer/contact)
 ├── article.html    # Single post (nav, header, featured image, prose + pull-quote, related, footer)
+├── free-bird.html  # Case study (fictional project; template for the Payload /work/<slug> pages)
 ├── css/styles.css  # tokens (Epilogue + palette) → base → sections → blog → article → responsive
 └── assets/         # SVG logos/icons + JPG/PNG photos, pulled from Figma via get_design_context
 ```
@@ -68,7 +69,7 @@ Pragmatic fluid breakpoints (in `styles.css`, all `@media` — desktop rules unt
 Verified via the iframe harness (`docs/VERIFY.md` — headless Chrome clamps <500px): **0 overflowing
 elements** at 390 / 768px on both pages (was 96 at 390px before). This is a graceful collapse of the
 desktop layout, **not** a pixel-match of the Figma mobile frames (which use a hamburger nav, a
-re-cased title, and a strict 2-col logo grid) — that fidelity is deferred to `portfolio-sanity`.
+re-cased title, and a strict 2-col logo grid) — that fidelity is still outstanding.
 
 ---
 
@@ -77,8 +78,8 @@ re-cased title, and a strict 2-col logo grid) — that fidelity is deferred to `
 ## Source file
 
 - **Figma file:** "Portfolio - MCP" — `fileKey 7ZkI83sSVEdHW2S03wYfai` (a `/design/` file, editable).
-- A whimsical portfolio template. Font **Epilogue**. Two routes: **Home** (portfolio landing) and
-  **About**.
+- A whimsical portfolio template. Font **Epilogue**. Originally two routes: **Home** (portfolio landing)
+  and **About** — Blog and Article were added later, Figma-first.
 - ⚠️ The repo dir is `portfolio/` (renamed from the original empty `saas-company/`) — the design
   turned out to be a portfolio, not a SaaS site. The first two files tried were Figma **Sites**
   (`/site/…`) files, which the design MCP tools don't support — only `/design/…` files work.
@@ -165,9 +166,8 @@ Extracted from the file's actual usage:
   section components still use raw hex/fonts). Rebinding every node is a large, higher-risk job.
 - **Full Auto-Layout audit** across all components.
 
-## Next pass — `portfolio-sanity`
+## CMS pass — done in `portfolio-payload`
 
-Static build ✅ done (above). Remaining: create `examples/portfolio-sanity/` (Next.js + embedded
-Sanity Studio), model the sections as Sanity content, render from the CMS reusing this `styles.css`,
-and re-verify with the same pixel-diff — exactly like [`../positivus-sanity/`](../positivus-sanity/).
-Route frames to diff against: `Home/Desktop` `176:2329`, `About/Desktop` `176:2345`.
+The originally planned `portfolio-sanity` port was built on **Payload CMS** instead — see
+[`../portfolio-payload/`](../portfolio-payload/). It reuses this `styles.css` and is pixel-diffed
+against these static pages (~0.04–0.07 mean abs diff on every page).
