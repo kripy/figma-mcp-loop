@@ -19,14 +19,26 @@ On the Positivus landing page included as a worked example, the loop produced an
 figma-mcp-loop/
 ├── HANDOFF_TEMPLATE.md         # designer-facing spec: how to prepare a Figma file
 ├── examples/
-│   └── positivus/              # worked example: landing page built from a Figma file
-│       ├── README.md           # build notes + verification workflow
-│       ├── index.html
-│       ├── css/
-│       └── assets/
+│   ├── positivus/              # worked example: landing page built from a Figma file (zero-dep)
+│   ├── positivus-sanity/       # the same page wired into Sanity + Next.js (CMS-driven, 0px drift)
+│   ├── portfolio/              # full front-to-back demo (see its README)
+│   │   │                       #   • Figma file reformatted to the HANDOFF format via Figma MCP
+│   │   │                       #   • Home / About / Blog / Article coded static pages, pixel-verified
+│   │   │                       #   • responsive; blog + article were built Figma-first then coded
+│   │   ├── index.html  about.html  blog.html  article.html
+│   │   ├── css/  assets/
+│   │   └── README.md
+│   └── portfolio-payload/      # the whole portfolio wired into Payload CMS (Payload 3 + Next.js + SQLite)
+│       │                       #   • Home/About via globals, Blog/Article via collections
+│       │                       #   • self-hosted, zero external infra; every page pixel-verified
+│       └── README.md
 └── docs/
     └── VERIFY.md               # the loop, step by step (commands you can paste)
 ```
+
+Each example has its own README with build notes, the Figma↔code mapping, and verification results.
+Together they show the loop end to end — **reformat Figma → generate code → pixel-diff → wire a CMS** —
+and the same page proven against two different CMSes (Sanity, hosted; Payload, self-hosted).
 
 ## The loop, in one screen
 
